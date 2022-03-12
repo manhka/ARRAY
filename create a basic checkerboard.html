@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro game</title>
+</head>
+<style>
+    td{
+        width: 40px;
+        height: 40px;
+    }
+</style>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame"/>
+<table id="board" border="1">
+</table>
+
+</body>
+</html>
+<script>
+   let row=10
+   let col=10
+   function CreateTb(){
+       let x=''
+       for (let i = 0; i < row; i++) {
+           x+='<tr>'
+           for (let j = 0; j < col; j++) {
+               x+= `<td onclick="ClickCell(this)"></td>`
+           }x+='<tr>'
+
+       }x+='<table>'
+       document.getElementById('board').innerHTML=x
+   }CreateTb()
+   let Player1=1;
+   let Player2=2
+   let turn= Player1
+   function ClickCell(cell){
+       if(cell.innerHTML===''){
+           if (turn===Player1)
+           {cell.innerHTML='X'
+               turn=Player2}
+       else{
+           cell.innerHTML='O'
+           turn=Player1
+       }
+   }}
+
+</script>
+
+

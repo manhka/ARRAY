@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change element in array using splice method</title>
+</head>
+<body>
+<script>
+    let newArray=[]
+    let arr=['-','s','-','g']
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i]==='-'){
+           newArray.push('_')
+        }
+        else{
+            newArray.push(arr[i])
+        }
+    }document.write(newArray)
+    // let w=arr[0]
+    // arr.indexOf(w)
+    // console.log(arr.indexOf(w))
+    // console.log(arr[0])
+</script>
+</body>
+</html>

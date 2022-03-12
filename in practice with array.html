@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pratice with array</title>
+</head>
+<body>
+<input placeholder="enter your word" type="text" id="array">
+<button onclick="Add()">ADD</button>
+<button onclick="Display()">DISPLAY</button>
+<br>
+<b id="result"></b>
+<script>
+let count=0
+    let array=[]
+    function Add(){
+       let x=document.getElementById('array').value;
+        console.log('x==',x)
+       array.push(x+'<br>')
+        console.log('arr==',array)
+let count1=count+1
+        document.getElementById('result').innerHTML+='element'+count1+':'+array[count]
+        count++
+       document.getElementById('array').value=''
+    }
+    function Display(){
+    let name1= document.getElementById('result').innerHTML+=' name:manh'+'   id:01'+'   age:19'+'<br>'
+    let name2= document.getElementById('result').innerHTML+=' name:tien'+'   id:02'+'   age:23'+'<br>'
+    let name3= document.getElementById('result').innerHTML+=' name:hong'+'   id:03'+'   age:47'+'<br>'
+    let name4= document.getElementById('result').innerHTML+=' name:nhien'+'   id:03'+'   age:50'+'<br>'
+    }
+</script>
+</body>
+</html>
